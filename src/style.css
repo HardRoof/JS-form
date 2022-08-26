@@ -1,0 +1,180 @@
+@import url(./normalize.css);
+
+:root {
+  font-size: 62.5%; /* To turn 1rem into 10px */
+  --dark-yellow-color: #ffc724;
+  --outside-bg-color: #ca7a57;
+  --light-brown-color: #e0c291;
+  --dark-brown-color: #cdac75;
+  --font-color: #59525a;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-size: 1.6rem; /* To turn 1rem into 10px */
+  color: var(--font-color);
+  display: grid;
+  align-items: center;
+  background: var(--outside-bg-color);
+  height: 100vh;
+  justify-items: center;
+  font-weight: 400;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  max-width: 75vw;
+}
+
+.card__left {
+  background-color: var(--dark-yellow-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left__header {
+  display: flex;
+  padding: 3rem 2rem;
+  gap: 1rem;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.card__right {
+  background-color: var(--light-brown-color);
+  padding: 3rem;
+}
+
+.right__text {
+  font-size: 2.8rem;
+}
+
+.header__name,
+.right__text {
+  font-size: 2.8rem;
+  margin: 0 0 2rem;
+  font-weight: 600;
+}
+
+.right__form,
+.form__account {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.4rem;
+  gap: 10px 20px;
+}
+
+.form__name,
+.form__breed,
+.form__birthday,
+.account__name,
+.account__email,
+.account__password,
+.account__confirm {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio__options {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-radius: 6px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  margin-top: 5px;
+  height: 32px;
+}
+
+.radio__options input[type="radio"] {
+  display: none;
+}
+
+.radio__options label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 80px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+
+.radio__options input[type="radio"]:checked + label {
+  background: var(--dark-brown-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+input {
+  margin-top: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 38px;
+  padding-left: 5px;
+}
+
+.form__account {
+  grid-area: 4/1/5/3;
+}
+
+.account__title {
+  grid-column: 1/3;
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 5px 0 -5px 0;
+}
+
+.form__radio--weight {
+  grid-column: 1/3;
+}
+
+.left__dog {
+  height: 350px;
+  width: 300px;
+  object-fit: cover;
+  object-position: -195px bottom;
+}
+
+.header__logo {
+  height: 45px;
+  margin-top: -18px;
+}
+
+.form__btns {
+  grid-column: 1/3;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 0;
+}
+
+.btns__button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 38px;
+  width: 10rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+}
+
+.btns__button--next {
+  background-color: var(--dark-yellow-color);
+}
+
+.btns__button:hover {
+  background-color: var(--font-color);
+  color: white;
+}
+
+.btns__button:active {
+  transform: translateY(2px);
+}
