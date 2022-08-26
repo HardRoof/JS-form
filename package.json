@@ -1,0 +1,35 @@
+{
+  "name": "js-form",
+  "version": "1.0.0",
+  "description": "A simple browser form that uses live inline validation to inform the user whether a field is properly filled in or not.",
+  "scripts": {
+    "build": "webpack --mode=development --watch --progress",
+    "release": "webpack --mode=production",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix-dry-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HardRoof/js-form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HardRoof/js-form/issues"
+  },
+  "homepage": "https://github.com/HardRoof/js-form#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "2.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
