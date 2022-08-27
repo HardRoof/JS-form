@@ -18,18 +18,28 @@
       </div>
       <div class="card__right">
         <p class="right__text">Yay, puppies! Sign-up and make sure your pup gets the best care!</p>
-        <form action="" class="right__form">
+        <form action="" class="right__form" novalidate>
           <div class="form__name">
             <label for="pet-name">Name<abbr title="Required" aria-label="required">*</abbr></label>
-            <input id="pet-name" type="text" autocomplete="off" spellcheck="true" placeholder="Dog's name" />
+            <span class="error"></span>
+            <input id="pet-name" type="text" autocomplete="off" spellcheck="true" placeholder="Dog's name" required />
           </div>
           <div class="form__breed">
             <label for="pets-breed">Breed<abbr title="Required" aria-label="required">*</abbr></label>
-            <input id="pets-breed" type="text" autocomplete="off" spellcheck="true" />
+            <span class="error"></span>
+            <input id="pets-breed" type="text" autocomplete="off" spellcheck="true" required />
           </div>
           <div class="form__birthday">
             <label for="pets-birthday">Birthday<abbr title="Required" aria-label="required">*</abbr></label>
-            <input id="pets-birthday" placeholder="MM/DD/YYYY" type="text" autocomplete="off" />
+            <span class="error"></span>
+            <input
+              id="pets-birthday"
+              placeholder="DD/MM/YYYY"
+              pattern="([0-2][0-9]|(3)[0-1])(\/)(((0)[0-9])|((1)[0-2]))(\/)([0-9][0-9][0-9][0-9])"
+              type="text"
+              autocomplete="off"
+              required
+            />
           </div>
           <div class="form__radio">
             <p>Gender<abbr title="Required" aria-label="required">*</abbr></p>
@@ -57,19 +67,23 @@
             <p class="account__title">Account</p>
             <div class="account__name">
               <label for="user-name">Owner<abbr title="Required" aria-label="required">*</abbr></label>
-              <input id="user-name" type="text" autocomplete="off" spellcheck="true" placeholder="Owner's Name" />
+              <span class="error"></span>
+              <input id="user-name" type="text" autocomplete="off" spellcheck="true" placeholder="Owner's Name" required />
             </div>
             <div class="account__email">
               <label for="user-email">Email<abbr title="Required" aria-label="required">*</abbr></label>
-              <input id="user-email" type="email" autocomplete="off" spellcheck="true" />
+              <span class="error"></span>
+              <input id="user-email" type="email" autocomplete="off" spellcheck="true" minlength="8" required />
             </div>
             <div class="account__password">
               <label for="password">Password<abbr title="Required" aria-label="required">*</abbr></label>
-              <input id="password" type="password" />
+              <span class="error"></span>
+              <input id="password" type="password" minlength="8" required />
             </div>
             <div class="account__confirm">
               <label for="confirm-password">Confirm Password<abbr title="Required" aria-label="required">*</abbr></label>
-              <input id="confirm-password" type="password" />
+              <span class="error"></span>
+              <input id="confirm-password" type="password" minlength="8" required />
             </div>
           </div>
           <div class="form__btns">
