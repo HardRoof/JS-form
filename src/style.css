@@ -27,12 +27,12 @@ p {
 
 .card {
   display: flex;
-  max-width: 75vw;
+  width: clamp(84rem, 75vw, 91rem);
 }
 
 .card__left {
-  background-color: var(--dark-yellow-color);
   display: flex;
+  background-color: var(--dark-yellow-color);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -66,8 +66,8 @@ p {
 .form__account {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  font-size: 1.4rem;
   gap: 10px 20px;
+  font-size: 1.4rem;
 }
 
 .form__name,
@@ -79,6 +79,7 @@ p {
 .account__confirm {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .radio__options {
@@ -116,9 +117,10 @@ p {
 
 input {
   margin-top: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   height: 38px;
   padding-left: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 }
 
 .form__account {
@@ -170,6 +172,15 @@ input {
   background-color: var(--dark-yellow-color);
 }
 
+.error--active {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.9);
+}
+
 .btns__button:hover {
   background-color: var(--font-color);
   color: white;
@@ -177,4 +188,10 @@ input {
 
 .btns__button:active {
   transform: translateY(2px);
+}
+
+input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
