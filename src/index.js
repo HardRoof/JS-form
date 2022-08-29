@@ -40,11 +40,11 @@ function showError(input, error) {
   if (input.validity.valueMissing) {
     error.textContent = "✖ This field is required.";
   } else if (input.validity.typeMismatch) {
-    error.textContent = "✖ Enter a valid e-mail address.";
+    error.textContent = "Enter a valid e-mail address.";
   } else if (input.validity.tooShort) {
     checkLength(input, error);
   } else if (input.validity.patternMismatch) {
-    error.textContent = "✖ Please match format DD/MM/YYYY";
+    error.textContent = "Please match format DD/MM/YYYY";
   } else if (password.value !== confirmPassword.value) error.textContent = "Passwords do not match. Try again.";
   error.className = "error--active";
 }
