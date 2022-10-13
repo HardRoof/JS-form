@@ -1,6 +1,6 @@
 # js-form
 
-> - [Live Demo](https://hardroof.github.io/js-form/)
+> - [Live Demo](https://hardroof.github.io/JS-form/)
 
 ---
 
